@@ -6,20 +6,6 @@
 %   gettysburg-address.txt (short)
 %   dickens-christmas.txt  (long)
   
-%% TODO:
-%%
-%% - Need to remove trailing commas and full stop to avoid having both
-%% "but" and "but," or "yes" and "yes.".
-%%
-%% - Remove words smaller than 3 characters.
-%%
-%% - Remove words from a list of unwated words
-%%
-%% - Normalizing for common plurals and endings not be repeated.
-%% 
-%% - Think about a better data representation.
-
-
 % Get the contents of a text file into a list of lines.
 % Each line has its trailing newline removed.
 get_file_contents(Name) ->
@@ -174,9 +160,7 @@ tests()->
 
     % Test the index_words/2 function
     Index = [{"first",[{0,0}]}, 
-	     {"is",[{0,0}]}, 
 	     {"line",[{0,0}]}, 
-	     {"my",[{0,0}]}, 
 	     {"this",[{0,0}]}],
     Index = 
 	index_words(
